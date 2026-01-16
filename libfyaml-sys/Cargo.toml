@@ -1,6 +1,6 @@
 [package]
 name = "libfyaml-sys"
-version = "0.2.6+fy0.9.1-alpha-g1f520e6"
+version = "0.2.7+fy0.9.3"
 authors = ["David Tolnay <dtolnay@gmail.com>"]
 categories = ["api-bindings", "encoding", "parser-implementations"]
 description = "Rust binding for libfyaml"
@@ -26,5 +26,5 @@ regex = "1.10.3"
 doc-scrape-examples = false
 
 [package.metadata.docs.rs]
-targets = ["x86_64-unknown-linux-gnu"]
+targets = ["x86_64-unknown-linux-musl"]
 rustdoc-args = ["--generate-link-to-definition"]
