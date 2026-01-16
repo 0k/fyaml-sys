@@ -12,7 +12,7 @@
     non_upper_case_globals
 )]
 
-#[allow(clippy::all, clippy::pedantic)]
+#[allow(clippy::all, clippy::pedantic, unnecessary_transmutes)]
 mod bindings {
     use libc::iovec;
     use libc::FILE;

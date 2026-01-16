@@ -21,7 +21,7 @@ fn generate_new_version(last_version: &str, commit_sha: &str) -> Result<String, 
     }
 
     let mut version = Version::parse(&version)
-        .map_err(|e| format!("Failed to parse {:?}: {}", last_version, e.to_string()))?;
+        .map_err(|e| format!("Failed to parse {:?}: {}", last_version, e))?;
 
     version.patch += 1;
 
@@ -96,7 +96,7 @@ fn main() {
     let re =
         Regex::new(r"^.*_v(report|log|printf|buildf|scanf|anchorf|log|event|scalarf|create|diag)$")
             .unwrap();
-    for function_name in all_function_names.filter(|name| re.is_match(&name)) {
+    for function_name in all_function_names.filter(|name| re.is_match(name)) {
         bindings = bindings.blocklist_function(function_name);
     }
 
@@ -117,7 +117,7 @@ fn main() {
     let build_dirs = build_dirs
         .into_iter()
         .map(|d| format!("libfyaml/src/{}", d))
-        .map(|d| PathBuf::from(d))
+        .map(PathBuf::from)
         .filter(|d| d.exists() && d.is_dir());
     for build_dir in build_dirs {
         add_c_files(&mut build, &build_dir);
