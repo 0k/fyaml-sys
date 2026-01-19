@@ -1,10 +1,16 @@
-//! [![github]](https://github.com/dtolnay/libfyaml-rs)&ensp;[![crates-io]](https://crates.io/crates/libfyaml-sys)&ensp;[![docs-rs]](https://docs.rs/libfyaml-sys)
+//! [![github]](https://github.com/0k/fyaml-sys)&ensp;[![crates-io]](https://crates.io/crates/fyaml-sys)&ensp;[![docs-rs]](https://docs.rs/fyaml-sys)
 //!
 //! [github]: https://img.shields.io/badge/github-8da0cb?style=for-the-badge&labelColor=555555&logo=github
 //! [crates-io]: https://img.shields.io/badge/crates.io-fc8d62?style=for-the-badge&labelColor=555555&logo=rust
 //! [docs-rs]: https://img.shields.io/badge/docs.rs-66c2a5?style=for-the-badge&labelColor=555555&logo=docs.rs
+//!
+//! # Origin
+//!
+//! This crate is a maintained fork of [libfyaml-sys](https://crates.io/crates/libfyaml-sys)
+//! originally created by [David Tolnay](https://github.com/dtolnay). The original
+//! repository was [archived](https://github.com/dtolnay/libfyaml-rs) in December 2024.
 
-#![doc(html_root_url = "https://docs.rs/libfyaml-sys/0.2.7+fy0.9.3")]
+#![doc(html_root_url = "https://docs.rs/fyaml-sys/0.1.0+fy0.9.3")]
 #![allow(
     improper_ctypes,
     non_camel_case_types,

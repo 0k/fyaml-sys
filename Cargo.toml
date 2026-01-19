@@ -1,3 +1,30 @@
-[workspace]
-members = ["libfyaml-sys"]
-resolver = "2"
+[package]
+name = "fyaml-sys"
+version = "0.1.0+fy0.9.3"
+authors = ["Valentin Lab <valentin.lab@kalysto.org>"]
+categories = ["api-bindings", "encoding", "parser-implementations"]
+description = "Rust FFI bindings for libfyaml (maintained fork of libfyaml-sys)"
+documentation = "https://docs.rs/fyaml-sys"
+edition = "2021"
+keywords = ["yaml", "ffi", "libfyaml"]
+license = "MIT"
+links = "libfyaml"
+repository = "https://github.com/0k/fyaml-sys"
+rust-version = "1.63"
+
+[dependencies]
+libc = "0.2"
+
+[build-dependencies]
+git2 = "0.18.1"
+bindgen = "0.69"
+semver = "1.0.21"
+cc = "1"
+regex = "1.10.3"
+
+[lib]
+doc-scrape-examples = false
+
+[package.metadata.docs.rs]
+targets = ["x86_64-unknown-linux-musl"]
+rustdoc-args = ["--generate-link-to-definition"]
