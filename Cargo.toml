@@ -10,7 +10,8 @@ keywords = ["yaml", "ffi", "libfyaml"]
 license = "MIT"
 links = "libfyaml"
 repository = "https://github.com/0k/fyaml-sys"
-rust-version = "1.63"
+rust-version = "1.70"
+exclude = [".pkg/", "AGENTS.md", "CLAUDE.md", ".claude/"]
 
 [dependencies]
 libc = "0.2"
